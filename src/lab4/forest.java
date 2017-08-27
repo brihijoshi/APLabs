@@ -2,29 +2,18 @@ package lab4;
 import java.util.*;
 
 class grassland{
+	
 	int x;
 	int y;
 	int r;
 	int grass;
-	
-	public int getX() {
-		return x;
-	}
-	public void setX(int x) {
+	public grassland(int x, int y, int r, int grass) {
 		this.x = x;
-	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
 		this.y = y;
-	}
-	public int getR() {
-		return r;
-	}
-	public void setR(int r) {
 		this.r = r;
+		this.grass = grass;
 	}
+	
 	public int getGrass() {
 		return grass;
 	}

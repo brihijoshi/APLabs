@@ -64,8 +64,11 @@ public abstract class animal implements Comparable<animal>{
 					if (coords.getDistance(0, 0)<a.coords.getDistance(0, 0)){
 						return -1;
 					}
-					else{
+					else if (coords.getDistance(0, 0)>a.coords.getDistance(0, 0)){
 						return 1;
+					}
+					else{
+						return 0;
 					}
 				}
 			}
