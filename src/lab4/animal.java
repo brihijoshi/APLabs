@@ -74,10 +74,12 @@ public abstract class animal implements Comparable<animal>{
 }
 class herbivore extends animal{
 	private int grass_capacity;
+	int turnsoutside;
 	
 	public herbivore(int health,int grass_capacity, point coords, int timestamp) {
 		super(health, coords, timestamp);
 		this.grass_capacity=grass_capacity;
+		turnsoutside=0;
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -95,9 +97,10 @@ class herbivore extends animal{
 	
 }
 class carnivore extends animal{
-		
+	int turnfarherbi;	
 	public carnivore(int health, point coords, int timestamp) {
 		super(health, coords, timestamp);
+		turnfarherbi=0;
 		// TODO Auto-generated constructor stub
 	}
 

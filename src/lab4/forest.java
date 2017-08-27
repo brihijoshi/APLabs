@@ -44,6 +44,14 @@ public class forest {
 		}
 		return false;
 	}
+	public static boolean herbivore_present(PriorityQueue<animal> list){
+		for (animal a:list){
+			if (a.getType().equals("h")){
+				return true;
+			}
+		}
+		return false;
+	}
 	public static grassland getNearestGrassland(animal a, grassland[] g){
 		if ((a.coords.getDistance(g[0].x, g[0].y)-g[0].r)<(a.coords.getDistance(g[1].x, g[1].y)-g[1].r)){
 			return g[0];
@@ -69,6 +77,19 @@ public class forest {
 		}
 		return (carnivore)l;
 	}
+	public static herbivore getNearestHerbivore(animal a, PriorityQueue<animal> list){
+		int dist=Integer.MAX_VALUE;
+		animal l=null;
+		for (animal m:list){
+			if (m.getType().equals("h")){
+				if (a.coords.getDistance(m.coords.x, m.coords.y)<dist){
+					dist=a.coords.getDistance(m.coords.x, m.coords.y);
+					l=m;
+				}
+			}
+		}
+		return (herbivore)l;
+	}
 	
 	public static boolean enoughGrass(herbivore h, grassland g){
 		if (h.getGrass_capacity()<=g.grass){
@@ -76,6 +97,8 @@ public class forest {
 		}
 		return false;
 	}
+	
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
