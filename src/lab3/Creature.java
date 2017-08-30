@@ -1,11 +1,5 @@
 package lab3;
 
-
-//Brihi Joshi
-//2016142
-//Lab3
-
-//Creature class which creates the Creature objects
 public class Creature {
 
 	private String name;
@@ -78,12 +72,10 @@ public class Creature {
 
 }
 
-//Special Damage interface which tackles the Dragon and Daemon case
 interface special_damage{
 	public boolean spec_damage();
 }
 
-//Inherited Classes from Creature
 class Human extends Creature{
 	public Human(String name, int power, int health, int cost, int asset) {
 		super(name, power, health, cost, asset);

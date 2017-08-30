@@ -76,9 +76,6 @@ class InputReader {
 		public boolean isSpaceChar(int ch);
 	}
 }
-
-//Good and Bad objects 
-
 class good{
 	int money;
 	ArrayList<Human> Human_list=new ArrayList<Human>();
@@ -102,7 +99,6 @@ class bad{
 	
 }
 
-//GameFlow class
 class GameFlow {
 	good good;
 	bad bad;
@@ -306,7 +302,10 @@ class GameFlow {
 	
 }
 
-//Game class which inherits the class
+
+
+
+
 
 public class Game extends GameFlow{
 	public Game(int m, int n) {
@@ -426,7 +425,7 @@ public class Game extends GameFlow{
 //		System.out.println(d1);
 		int goodtotal=game.good.Human_list.size()+game.good.FireDragon_list.size()+game.good.wolf_list.size();
 		int badtotal=game.bad.Daemon_list.size()+game.bad.IceDragon_list.size();
-		while ((game.good.money>=0) && (game.bad.money>=0) && goodtotal!=0 && badtotal!=0){
+		while ((game.good.money>0) && (game.bad.money>0)){
 			int round=1;
 			if (g[0]==-1 && g[1]==-1 && b[0]==-1 && b[1]==-1){
 			System.out.println("Round"+round+":");

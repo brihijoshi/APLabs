@@ -191,8 +191,9 @@ public class world {
 					}
 				}
 				else{
-					int chance = (int) Math.random()*100+1;
-					if (chance <=25){
+					int chance3 = (int) Math.random()*100+1;
+					
+					if (chance3 <=25){
 						c.setHealth(c.getHealth()-30);
 					}
 					else{
