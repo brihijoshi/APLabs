@@ -1,3 +1,14 @@
+/**
+ * @author Brihi Joshi
+ * 2016142
+ * CSE
+ * @version 0.6
+ * 
+ */
+
+
+
+
 package lab5;
 import java.util.*;
 import java.io.BufferedReader;
@@ -5,9 +16,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-/**
- * A simple example program that reads a text file line by line and display each line.
- */
+
+
+
+
+
 public class christmas {
 	
 	public static void main(String[] args) throws FileNotFoundException{
@@ -110,10 +123,7 @@ public class christmas {
 	    					}
 	    				}
 	    			}
-	    		}
-	            
-	            
-	            
+	    		}     
 	        } 
 	        catch (IOException e) {
 	            e.printStackTrace();
