@@ -1,5 +1,5 @@
 package lab5;
-
+import java.util.*;
 class Node<T extends Comparable<T>> {
     private T value;
     private Node<T> left;
@@ -36,11 +36,19 @@ class Node<T extends Comparable<T>> {
 
 public class BST<T extends Comparable<T>> {
     private Node<T> root;
+    ArrayList<T> list=new ArrayList<T>();
 
-    public BST(T value) {
+	public BST(T value) {
         root = new Node<T>(value);
     }
-
+    public Node<T> getRoot() {
+		return root;
+	}
+    
+    public ArrayList<T> getList(){
+    	return list;
+    }
+    
     public void insert(Node<T> node,T value) {
     	if(value.compareTo(node.getValue()) <= 0) {
             if(node.getLeft() == null)
@@ -54,6 +62,16 @@ public class BST<T extends Comparable<T>> {
             else
                 insert(node.getRight(), value);
         }
+    }
+    public void inorder(Node<T> node){
+    	if (node==null){
+    		return;
+    	}
+    	else{
+    		inorder(node.getLeft());
+    		list.add(node.getValue());
+    		inorder(node.getRight());
+    	}
     }
 }
 
