@@ -122,9 +122,6 @@ public class knight {
 			knight_list.add(i, k);	
 		}
 		
-		for (int i=0;i<n;i++){
-			System.out.println(knight_list.get(i).name);
-		}
 		
 		
 
